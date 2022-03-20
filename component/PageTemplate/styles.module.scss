@@ -1,0 +1,33 @@
+@import "../../asset/scss/main.scss";
+
+.headerContent {
+  background-color: red;
+  background: url("./space-mountain-2.jpg") no-repeat center center;
+  background-attachment: scroll;
+  box-shadow: inset 2px 2px 30px #000000;
+  background-size: cover;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 30px auto;
+}
+
+.mainContent {
+  display: grid;
+}
+
+@include min-width(900px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: none 100% none;
+  }
+}
+@include min-width(1024px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: 20% Auto 10%;
+  }
+}

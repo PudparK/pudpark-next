@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "name": "Home",
+      "url": "/",
+      "type": "general"
+    },
+    {
+      "name": "Projects",
+      "url": "/projects",
+      "type": "general"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "type": "general"
+    },
+    {
+      "name": "Resume",
+      "url": "/download/paul-barron-developer-resume.pdf",
+      "type": "button"
+    }
+  ]
+}

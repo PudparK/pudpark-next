@@ -1,0 +1,71 @@
+.bioPic {
+  background: url("./bw-paul-barron-600.png");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: calc(100vw - 400px) bottom;
+  min-height: 457px;
+}
+
+@media screen and (min-width: 768px) {
+  .bioPic {
+    background-position: right bottom;
+  }
+}
+
+.homeHeading ul li:first-child {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  color: var(--primary-red);
+}
+
+.homeHeading ul li a {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-red);
+}
+
+.homeHeading ul {
+  justify-content: space-around;
+  color: var(--primary-red);
+}
+
+@media screen and (min-width: 640px) {
+  .homeHeading ul li:first-child {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  .homeHeading ul {
+    justify-content: initial;
+  }
+
+  .homeHeading ul li {
+    margin-right: 20px;
+  }
+}
+
+.cursor::after {
+  content: "";
+  background: #ffffff;
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  position: absolute;
+  -webkit-animation: blink 1s step-start infinite;
+  width: 7px;
+  height: 1.25rem;
+  top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .cursor::after {
+    top: 4px;
+  }
+}
+
+.quoteContainer {
+  .quotes {
+    color: var(--primary-red);
+  }
+}

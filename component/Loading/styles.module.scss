@@ -1,0 +1,30 @@
+.bigCursor {
+  position: relative;
+  margin-top: 100px;
+  &::after {
+    content: "";
+    background: #ffffff;
+    display: inline-block;
+    margin-left: 3px;
+    animation: blink 1s infinite;
+    position: absolute;
+    -webkit-animation: blink 1s step-start infinite;
+    width: 7px;
+    height: 1.25rem;
+    top: 3px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bigCursor::after {
+    top: 4px;
+    height: 2.25rem;
+    width: 12px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

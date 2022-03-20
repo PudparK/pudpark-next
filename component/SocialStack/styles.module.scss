@@ -1,0 +1,28 @@
+@import "../../asset/scss/main.scss";
+
+.socialStack {
+  display: flex;
+  justify-content: space-around;
+  grid-template-columns: repeat(5, 1fr);
+  div {
+    margin-bottom: 15px;
+  }
+}
+@include large-devices {
+  .socialStack {
+    display: flex;
+    flex-direction: column;
+    div {
+      margin-bottom: 15px;
+      a {
+        align-items: center;
+        justify-content: center;
+      }
+      &:last-child {
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

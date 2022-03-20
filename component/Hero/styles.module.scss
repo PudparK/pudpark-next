@@ -1,0 +1,33 @@
+@import "../../asset/scss/main.scss";
+
+.HeroCover {
+  display: flex;
+  align-items: center;
+  grid-area: cover;
+  height: 140px;
+  margin: 40px auto;
+  svg {
+    display: inline;
+  }
+  .header {
+    display: inline;
+    font-size: 4rem;
+    span {
+      color: var(--primary-red);
+      font-size: 5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+@include min-width(900px) {
+  .HeroCover {
+    min-height: 300px;
+    .header {
+      font-size: 10rem;
+      span {
+        font-size: 5rem;
+      }
+    }
+  }
+}

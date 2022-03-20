@@ -1,0 +1,60 @@
+.active {
+  position: relative;
+}
+.active::after {
+  background-color: var(--primary-red);
+  bottom: 4px;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  animation: activeAnimation 0.4s forwards;
+}
+.activeButton {
+  background-color: var(--primary-red);
+  color: #000000;
+}
+
+@keyframes activeButtonAnimation {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--primary-red);
+  }
+}
+@keyframes activeAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16px;
+  }
+}
+.headerLogo {
+  width: 50px;
+}
+
+.mobileMenu {
+  max-height: 233px;
+  overflow: hidden;
+  transition: ease-in-out 0.7s;
+}
+
+.mobileClose {
+  max-height: 0;
+}
+
+.header {
+  background-color: var(--primary-dark);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+  color: var(--primary-red);
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .mobileClose {
+    display: flex;
+    max-height: inherit;
+  }
+}

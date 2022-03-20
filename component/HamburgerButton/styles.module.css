@@ -1,0 +1,146 @@
+.HamburgerButton {
+	cursor: pointer;
+	height: 24px;
+	position: relative;
+	user-select: none;
+	width: 24px;
+	z-index: 101;
+}
+
+.HamburgerButton span {
+	background-color: var(--primary-red);
+	display: block;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	width: 24px;
+}
+
+.isToggled {
+	animation: hamburger-saw 1s ease-in-out 1 forwards;
+}
+
+.HamburgerButton span:first-child {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+.HamburgerButton span:nth-child(2) {
+	top: 8px;
+}
+
+.HamburgerButton span:last-child {
+	top: 16px;
+}
+
+/* Burger Close */
+.isNotToggled span:first-child {
+	animation: smashDownReverse 0.5s 1 forwards;
+}
+
+.isNotToggled span:nth-child(2) {
+	animation: burgerVomit 0.25s 1 forwards;
+}
+
+.isNotToggled span:last-child {
+	animation: smashUpReverse 0.5s 1 forwards;
+}
+
+.isToggled span:first-child {
+	animation: smashDown 0.5s 1 forwards;
+}
+
+.isToggled span:nth-child(2) {
+	animation: burgerEaten 0.25s 1 forwards;
+}
+
+.isToggled span:last-child {
+	animation: smashUp 0.5s 1 forwards;
+}
+
+@keyframes burgerEaten {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Smash Down */
+@keyframes smashDown {
+	0% {
+		top: 0;
+	}
+
+	50% {
+		top: 8px;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		top: 8px;
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes smashDownReverse {
+	0% {
+		top: 8px;
+		transform: rotate(45deg);
+	}
+
+	50% {
+		top: 8px;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes burgerVomit {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Smash Down */
+@keyframes smashUp {
+	0% {
+		top: 16px;
+	}
+
+	50% {
+		top: 8px;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		top: 8px;
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes smashUpReverse {
+	0% {
+		top: 8px;
+		transform: rotate(135deg);
+	}
+
+	50% {
+		top: 8px;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		top: 16px;
+	}
+}
