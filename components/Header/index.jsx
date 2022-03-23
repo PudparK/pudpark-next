@@ -55,7 +55,7 @@ function Header() {
   return (
     <div className={styles.header + " px-0 text-red"}>
       <div className="container">
-        <nav className="py-3 items-center justify-between flex-wrap flex">
+        <nav className="pt-3 pb-4 lg:pb-3 items-center justify-between flex-wrap flex">
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="noSelect" onClick={toggleClose}>
               <Image
