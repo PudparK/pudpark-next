@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./home.module.scss";
-import Quotes from "../../component/Quotes";
+import Quotes from "../components/Quotes";
 import classNames from "classnames";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,8 +23,8 @@ const Home = () => {
         <h1 className="text-red text-5xl sm:text-6xl font-bold">Paul Barrón</h1>
         <p className="lg:w-3/4 text-3xl sm:text-5xl font-black leading-tight mb-6">
           I started out building <span className="hCallout">HTML</span> moved on
-          to <span className="hCallout">CSS</span> and now I'm controlling the
-          two w/
+          to <span className="hCallout">CSS</span> and now I&apos;m controlling
+          the two w/
           <span className="hCallout"> JS</span>.
         </p>
 

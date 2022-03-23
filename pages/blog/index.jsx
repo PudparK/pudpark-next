@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 // import styles from "./styles.module.scss";
 
 // Components
-import Loading from "../../component/Loading";
-import PageTemplate from "../../component/PageTemplate";
-import PostContainer from "../../component/PostContainer";
-import SocialStack from "../../component/SocialStack";
-import Sidebar from "../../component/Sidebar";
+import Loading from "../../components/Loading";
+import PageTemplate from "../../components/PageTemplate";
+import PostContainer from "../../components/PostContainer";
+import SocialStack from "../../components/SocialStack";
+import Sidebar from "../../components/Sidebar";
 
 //Data
-import fetchData from "util/netReq";
+import fetchData from "../../util/netReq";
 
 function Blog() {
   const [data, setData] = useState(null);

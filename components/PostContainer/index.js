@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.scss";
 
@@ -5,7 +6,7 @@ function Blog({ blogPost }) {
   return (
     <div className={styles.Post}>
       <div className={styles.cover}>
-        <img src={blogPost.cover_image} alt="Pudpark Developer" />
+        <Image src={blogPost.cover_image} alt="Pudpark Developer" />
       </div>
       <div className={styles.PostContent}>
         <div className={styles.articleHeader}>
@@ -64,10 +65,10 @@ function PostContainer({ data, postType }) {
       {postType === "blog"
         ? data.map((blogPost, i) => <Blog blogPost={blogPost} key={i} />)
         : data.data.user.repositories.nodes.map((project, key) => {
-          return project.homepageUrl ? (
-            <Project project={project} key={key} />
-          ) : null;
-        })}
+            return project.homepageUrl ? (
+              <Project project={project} key={key} />
+            ) : null;
+          })}
     </article>
   );
 }

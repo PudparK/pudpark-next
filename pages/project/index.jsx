@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import PageTemplate from "../../component/PageTemplate";
-// import PostContainer from "../../component/PostContainer";
+import PageTemplate from "../../components/PageTemplate";
+// import PostContainer from "../../components/PostContainer";
 
 // Data
-import fetchData from "util/netReq";
+import fetchData from "../../util/netReq";
 
 // Component
-import Loading from "../../component/Loading";
-import PostContainer from "../../component/PostContainer";
-import Sidebar from "../../component/Sidebar";
-import SocialStack from "../../component/SocialStack";
+import Loading from "../../components/Loading";
+import PostContainer from "../../components/PostContainer";
+import Sidebar from "../../components/Sidebar";
+import SocialStack from "../../components/SocialStack";
 
 function Project() {
   const [data, setData] = useState(null);

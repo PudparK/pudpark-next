@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@variants hover {
+  .bg-red {
+    background-color: var(--primary-red);
+  }
+}
+@import "./media_queries";
+:root {
+  --primary-red: #c8202f;
+  --primary-dark: #131313;
+  --react: #61daf6;
+  --javascript: #f7df1e;
+  --css: #2965f1;
+  --node: #3d8836;
+  --defaultColor: #c8202f;
+  --primary-line-height: 1;
+  --code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --pixel: "Press Start 2P", cursive;
+  --noto: "Noto Sans JP", sans-serif;
+}
 html,
 body {
   padding: 0;
@@ -17,21 +35,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@import "./asset/scss/main.scss";
-:root {
-  --primary-red: #c8202f;
-  --primary-dark: #131313;
-  --react: #61daf6;
-  --javascript: #f7df1e;
-  --css: #2965f1;
-  --node: #3d8836;
-  --defaultColor: #c8202f;
-  --primary-line-height: 1;
-  --code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-  --pixel: "Press Start 2P", cursive;
-  --noto: "Noto Sans JP", sans-serif;
 }
 
 body {

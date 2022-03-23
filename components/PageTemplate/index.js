@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 // Components
-import Hero from "../../component/Hero";
+import Hero from "../../components/Hero";
 
 function PageTemplate({ children, title }) {
   return (
