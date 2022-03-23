@@ -36,7 +36,7 @@ function Header() {
       } else {
         return (
           <a
-            className="noSelect inline-block text-2xl font-semibold px-4 py-2 leading-none border-2 rounded border-red hover:border-transparent hover:bg-red hover:text-black mt-4 lg:mt-0"
+            className="noSelect inline-block text-2xl font-semibold px-4 py-2 leading-none border-2 rounded border-red hover:border-transparent bg-dark hover:bg-red hover:text-dark mt-4 lg:mt-0"
             href={link.url}
             onClick={toggleClose}
             target="_blank"
@@ -55,8 +55,8 @@ function Header() {
 
   return (
     <div className={styles.header + " px-0 text-red"}>
-      <div className="pk-container">
-        <nav className="sub-container mx-auto py-3 items-center justify-between flex-wrap flex">
+      <div className="container">
+        <nav className="py-3 items-center justify-between flex-wrap flex">
           <div className="flex items-center flex-shrink-0">
             <Link href="/">
               <a className="noSelect" onClick={toggleClose}>

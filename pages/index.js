@@ -13,10 +13,10 @@ import {
 
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Home = () => {
+function Home() {
   return (
-    <>
-      <div className="sub-container h-screen flex flex-col justify-center">
+    <div className="container">
+      <div className="h-screen flex flex-col justify-center">
         <h3 className="text-base font-bold relative lg:text-xl cursor">
           HELLO WORLD
         </h3>
@@ -32,7 +32,7 @@ const Home = () => {
           <ul className="flex flex-wrap items-center text-3xl lg:text-4xl">
             <li className="block sm:inline-block">
               <Link href="/projects">
-                <a className="leading-none text-2xl block text-center sm:inline-block font-semibold px-4 py-2 border-2 rounded border-red text-red hover:border-transparent hover:bg-red hover:text-black noSelect">
+                <a className="leading-none text-2xl block text-center sm:inline-block font-semibold px-4 py-2 border-2 rounded border-red text-red hover:border-transparent hover:bg-red hover:text-dark noSelect">
                   Projects
                 </a>
               </Link>
@@ -70,10 +70,7 @@ const Home = () => {
         </div>
       </div>
       <div
-        className={classNames(
-          "sub-container flex flex-col justify-center",
-          styles.bioPic
-        )}
+        className={classNames("flex flex-col justify-center", styles.bioPic)}
       >
         <div className={styles.quoteContainer}>
           <FontAwesomeIcon
@@ -84,7 +81,8 @@ const Home = () => {
           <Quotes />
         </div>
       </div>
-    </>
+    </div>
   );
-};
+}
+
 export default Home;
