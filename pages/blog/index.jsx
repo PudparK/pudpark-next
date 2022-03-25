@@ -10,33 +10,29 @@ import SocialStack from "../../components/SocialStack";
 import Sidebar from "../../components/Sidebar";
 
 //Data
-import fetchData from "../../util/netReq";
+import { getBlogPosts } from "../../api/endpoints/devto";
 
-function Blog() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      fetchData("/.netlify/functions/api/devto").then((data) => setData(data));
-    }, 1200);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
-
+function Blog({ posts }) {
   return (
     <>
-      {!data ? (
+      {!posts ? (
         <Loading />
       ) : (
         <PageTemplate title="Blog">
           <Sidebar />
-          <PostContainer data={data} postType="blog" />
+          <PostContainer data={posts} postType="blog" />
           <SocialStack />
         </PageTemplate>
       )}
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const posts = await getBlogPosts();
+  return {
+    props: { posts }, // will be passed to the page component as props
+  };
 }
 
 export default Blog;

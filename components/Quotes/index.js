@@ -3,17 +3,10 @@ import fetchData from "../../util/netReq";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 
-const Quotes = () => {
-  const [data, setData] = useState(null);
+const Quotes = ({ quotes }) => {
+  const [data, setData] = useState(quotes);
   const [currentQuote, setCurrentQuote] = useState(0);
   const [transition, setTransition] = useState(false);
-
-  useEffect(() => {
-    fetchData("/.netlify/functions/api/airtable").then((fetchedData) => {
-      console.log("fetchedData:", fetchedData);
-      setData(fetchedData);
-    });
-  }, []);
 
   return (
     <blockquote

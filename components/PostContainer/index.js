@@ -6,7 +6,11 @@ function Blog({ blogPost }) {
   return (
     <div className={styles.Post}>
       <div className={styles.cover}>
-        <Image src={blogPost.cover_image} alt="Pudpark Developer" />
+        <Image
+          src={blogPost.cover_image}
+          alt="Pudpark Developer"
+          layout="fill"
+        />
       </div>
       <div className={styles.PostContent}>
         <div className={styles.articleHeader}>

@@ -4,25 +4,16 @@ import PageTemplate from "../../components/PageTemplate";
 // import PostContainer from "../../components/PostContainer";
 
 // Data
-import fetchData from "../../util/netReq";
 
 // Component
 import Loading from "../../components/Loading";
 import PostContainer from "../../components/PostContainer";
 import Sidebar from "../../components/Sidebar";
 import SocialStack from "../../components/SocialStack";
+import { getRepos } from "../../api/endpoints/github";
 
-function Project() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      fetchData("/.netlify/functions/api/github").then((data) => setData(data));
-    }, 1200);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
+function Project({ repos }) {
+  const [data, setData] = useState(repos);
 
   return (
     <>
@@ -40,3 +31,12 @@ function Project() {
 }
 
 export default Project;
+
+export async function getStaticProps(context) {
+  const repos = await getRepos();
+  return {
+    props: {
+      repos,
+    },
+  };
+}

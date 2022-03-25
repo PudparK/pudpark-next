@@ -12,8 +12,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { getQuotes } from "../api/endpoints/airtable";
 
-function Home() {
+function Home({ quotes }) {
   return (
     <div className="container">
       <div className="h-screen flex flex-col justify-center">
@@ -78,7 +79,7 @@ function Home() {
             size="2x"
             className={styles.quotes}
           />
-          <Quotes />
+          <Quotes quotes={quotes} />
         </div>
       </div>
     </div>
@@ -86,3 +87,10 @@ function Home() {
 }
 
 export default Home;
+
+export async function getStaticProps(context) {
+  const quotes = await getQuotes();
+  return {
+    props: { quotes },
+  };
+}
